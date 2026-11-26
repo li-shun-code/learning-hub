@@ -13,7 +13,7 @@ fs.mkdirSync(IMG, { recursive: true })
 // 讲次 -> 交互动画组件（只映射到确实有对应 VisXxx 的讲）
 const VIS_MAP = {
   3: 'VisComplexity', 4: 'VisComplexity',
-  5: 'VisLinkedList', 6: 'VisLinkedList', 7: 'VisLinkedList',
+  6: 'VisLinkedList', 7: 'VisLinkedList',
   8: 'VisStackQueue', 9: 'VisStackQueue',
   10: 'VisRecursion',
   11: 'VisSorting', 12: 'VisSorting', 13: 'VisSorting', 14: 'VisSorting',
