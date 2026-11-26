@@ -1,4 +1,4 @@
-# 阶段 1 · Python 与工程基础
+﻿# 阶段 1 · Python 与工程基础
 
 > **目标**：打牢 Python 与工程地基，能熟练写脚本和接口服务。
 > **建议时长**：30–45 天（零基础），有基础可快速过一遍。
@@ -12,13 +12,13 @@ AI 应用开发说到底是**软件开发**。没有扎实的编程和工程基�
 
 ## 本阶段目录
 
-1. [环境搭建与虚拟环境](/stage1/env-setup)——Python 安装、编辑器、venv / uv、包管理
-2. [Python 核心语法](/stage1/python-basics)——变量、类型、流程控制、数据结构
-3. [函数、模块与面向对象](/stage1/functions-modules-oop)——拆代码、组织代码、类与实例
-4. [文件、JSON 与异常处理](/stage1/files-json-errors)——数据持久化与错误处理
-5. [FastAPI 接口开发](/stage1/fastapi)——现代 Python AI 应用的主流后端框架
-6. [数据库与工程习惯](/stage1/db-and-engineering)——SQLite、Git、.env、README、测试
-7. [阶段实战与自测](/stage1/project-and-checklist)——做一个完整小服务并自检
+1. [环境搭建与虚拟环境](/llm/stage1/env-setup)——Python 安装、编辑器、venv / uv、包管理
+2. [Python 核心语法](/llm/stage1/python-basics)——变量、类型、流程控制、数据结构
+3. [函数、模块与面向对象](/llm/stage1/functions-modules-oop)——拆代码、组织代码、类与实例
+4. [文件、JSON 与异常处理](/llm/stage1/files-json-errors)——数据持久化与错误处理
+5. [FastAPI 接口开发](/llm/stage1/fastapi)——现代 Python AI 应用的主流后端框架
+6. [数据库与工程习惯](/llm/stage1/db-and-engineering)——SQLite、Git、.env、README、测试
+7. [阶段实战与自测](/llm/stage1/project-and-checklist)——做一个完整小服务并自检
 
 ## 学完这一阶段，你应该能
 

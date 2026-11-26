@@ -1,4 +1,4 @@
-# 5. FastAPI 接口开发
+﻿# 5. FastAPI 接口开发
 
 [FastAPI](https://fastapi.tiangolo.com/zh/) 是目前 Python AI 应用的主流后端框架：写起来简单、自带数据校验、自动生成接口文档、天生支持异步。后面你把大模型包成 API 服务时，基本就是用它。
 
@@ -119,4 +119,4 @@ my-ai-app/
 
 ## 下一步
 
-进入 [数据库与工程习惯](/stage1/db-and-engineering)，给你的服务加上存储和工程规范。
+进入 [数据库与工程习惯](/llm/stage1/db-and-engineering)，给你的服务加上存储和工程规范。

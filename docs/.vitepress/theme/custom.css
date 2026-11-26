@@ -1,0 +1,96 @@
+/* 交互式可视化组件通用样式 */
+.vp-doc .vis-root {
+  --vis-bg: var(--vp-c-bg-soft);
+  --vis-border: var(--vp-c-divider);
+  --vis-text: var(--vp-c-text-1);
+  --vis-muted: var(--vp-c-text-2);
+  --vis-primary: #3451b2;
+  --vis-accent: #d97706;
+  --vis-ok: #16a34a;
+  --vis-warn: #dc2626;
+  border: 1px solid var(--vis-border);
+  border-radius: 12px;
+  background: var(--vis-bg);
+  padding: 16px;
+  margin: 20px 0;
+}
+.vp-doc .vis-root h4 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  border: none;
+  padding: 0;
+}
+.vp-doc .vis-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.vp-doc .vis-controls button {
+  background: var(--vis-primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  line-height: 1.4;
+}
+.vp-doc .vis-controls button:hover { filter: brightness(1.12); }
+.vp-doc .vis-controls button:disabled { opacity: .45; cursor: not-allowed; }
+.vp-doc .vis-controls button.ghost {
+  background: transparent;
+  color: var(--vis-primary);
+  border: 1px solid var(--vis-primary);
+}
+.vp-doc .vis-controls label { font-size: 13px; color: var(--vis-muted); display: inline-flex; align-items: center; gap: 6px; }
+.vp-doc .vis-controls input[type=range] { width: 110px; }
+.vp-doc .vis-stage {
+  min-height: 90px;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vis-border);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+}
+.vp-doc .vis-desc {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: var(--vis-muted);
+  min-height: 20px;
+}
+.vp-doc .vis-progress { width: 100%; margin: 10px 0 4px; }
+.vp-doc .vis-counter { font-size: 12px; color: var(--vis-muted); margin-left: auto; }
+
+/* 通用元素 */
+.vis-cells { display: flex; flex-wrap: wrap; gap: 6px; align-items: flex-end; }
+.vis-cell {
+  min-width: 30px;
+  padding: 5px 7px;
+  border-radius: 5px;
+  background: var(--vis-bg);
+  border: 1px solid var(--vis-border);
+  text-align: center;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  transition: all .25s ease;
+}
+.vis-cell.active { background: var(--vis-primary); color: #fff; border-color: var(--vis-primary); }
+.vis-cell.compare { background: var(--vis-accent); color: #fff; border-color: var(--vis-accent); }
+.vis-cell.done { background: var(--vis-ok); color: #fff; border-color: var(--vis-ok); }
+.vis-bar { width: 30px; background: var(--vis-primary); border-radius: 4px 4px 0 0; transition: height .25s ease; }
+.vis-bar.active { background: var(--vis-accent); }
+.vis-bar.done { background: var(--vis-ok); }
+.vis-tag { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; background: var(--vis-bg); border: 1px solid var(--vis-border); margin: 2px; }
+.vis-tag.on { background: var(--vis-ok); color: #fff; border-color: var(--vis-ok); }
+.vis-tag.cur { background: var(--vis-accent); color: #fff; border-color: var(--vis-accent); }
+.vis-node {
+  min-width: 30px; height: 30px; line-height: 30px; text-align: center;
+  border-radius: 50%; background: var(--vis-bg); border: 2px solid var(--vis-primary);
+  font-size: 12px; display: inline-block; transition: all .25s ease;
+}
+.vis-node.active { background: var(--vis-accent); border-color: var(--vis-accent); color: #fff; }
+.vis-node.done { background: var(--vis-ok); border-color: var(--vis-ok); color: #fff; }
+.vis-arrow { color: var(--vis-muted); margin: 0 2px; }
+.vis-line { font-family: ui-monospace, monospace; font-size: 12px; line-height: 1.7; white-space: pre-wrap; }

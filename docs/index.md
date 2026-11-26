@@ -2,48 +2,46 @@
 layout: home
 
 hero:
-  name: "Python 大模型应用开发"
-  text: "从零到 Agent 的学习路线"
-  tagline: 一条按依赖关系排列的路线：先应用、后原理，每一步都有产出
-  image:
-    src: /logo.svg
-    alt: Python LLM Learning
+  name: '学习中心'
+  text: '一个站点，装下你所有的学习主题'
+  tagline: 通用学习站点 · 模块化组织 · 边学边做
   actions:
     - theme: brand
-      text: 开始学习
-      link: /guide/roadmap
+      text: 大模型应用开发
+      link: /llm/
     - theme: alt
-      text: 阶段 0 · AI 工具上手
-      link: /stage0/
+      text: 图解数据结构与算法
+      link: /dsa/
     - theme: alt
-      text: 在 GitHub 查看
-      link: https://github.com/li-shun-code/python-llm-learning
+      text: GitHub 仓库
+      link: https://github.com/li-shun-code/learning-hub
 
 features:
   - icon: 🤖
-    title: 阶段 0 · AI 编程工具
-    details: 先学会用 AI 写 AI。掌握 Cursor / Claude Code 等工具，学会管理上下文与审查生成代码。
-  - icon: 🐍
-    title: 阶段 1 · Python 工程基础
-    details: 环境搭建、核心语法、面向对象、虚拟环境、FastAPI 接口开发，为大模型应用打地基。
-  - icon: 🧭
-    title: 完整学习路线
-    details: 从大模型认知、API 调用、提示词工程，到 RAG、Agent、评测部署，九个阶段循序渐进。
+    title: 大模型应用开发
+    details: 从 AI 工具、Python 工程基础，到提示词、RAG、Agent 的九阶段路线与教程。大模型只是这里的一个模块。
+  - icon: 🧩
+    title: 图解数据结构与算法
+    details: 用图解 + Python 代码讲清数组、链表、树、图、排序、动态规划等核心知识，从直觉到实现。
+  - icon: 📚
+    title: 持续扩展
+    details: 站点按模块组织，后续可轻松加入前端、数据库、操作系统等新主题，一个仓库管理全部学习笔记。
   - icon: 🛠️
     title: 边学边做
-    details: 学完调用写工具，学完 RAG 搭知识库，学完 Agent 做助手。简历上的项目据此攒出来。
+    details: 每个模块都强调实战与产出：学完调用写工具，学完结构刷题，让知识真正落地。
 ---
 
-## 为什么要走这条路线？
+## 关于这个站点
 
-很多人一上来就扎进 Transformer 公式推导，啃两周就放弃了——**顺序反了**。你现在用的大模型是别人已经训练好的，你要做的是「用它 + 接业务 + 上工程」，而不是「造它」。
+这是一个**通用的学习中心**。大模型应用开发是其中一个模块，而不是站点的全部。站点按主题拆分成独立模块，每个模块有自己的学习路线和教程，共用同一套搜索、导航和部署。
 
-正确的顺序是：**先把它当黑盒用起来，做出项目建立直觉，再回头拆开看原理**。这时候你才会发现「哦，原来那个机制是为了解决我遇到的那个问题」。
+## 已有模块
 
-## 站点内容
+- **[🤖 大模型应用开发](/llm/)**：九阶段学习路线，已完成阶段 0（AI 工具上手）和阶段 1（Python 与工程基础）的教程。
+- **[🧩 图解数据结构与算法](/dsa/)**：以图解为核心，覆盖数据结构、算法与复杂度分析，帮助建立直觉并落到代码。
 
-- **[完整学习路线](/guide/roadmap)**：九个阶段的总览，含时长与产出目标。
-- **[阶段 0](/stage0/)**：AI 编程工具上手，3–7 天。
-- **[阶段 1](/stage1/)**：Python 与工程基础，30–45 天。
+## 为什么这样组织？
 
-> 本站点持续更新，后续会补齐阶段 2–8 的教程。
+知识点之间是有关联的：Python 基础既是后端开发的地基，也是刷算法题的工具；复杂度分析能帮你判断大模型应用的性能瓶颈。把内容放在一个站点里，用模块分隔，既能各学各的，也能互相参照。
+
+> 本站基于 VitePress 构建，push 后由 GitHub Actions 自动部署。后续会持续补充新模块与现有模块的新阶段。
