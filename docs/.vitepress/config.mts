@@ -1,4 +1,15 @@
 import { defineConfig } from 'vitepress'
+import fs from 'node:fs'
+import path from 'node:path'
+
+// 从生成好的讲义文件中读取真实标题，保证侧边栏与正文一致
+const LECTURE_TITLES: string[] = Array.from({ length: 56 }, (_, i) => {
+  const num = String(i + 1).padStart(2, '0')
+  const file = path.resolve(process.cwd(), `docs/dsa/lectures/${num}.md`)
+  if (!fs.existsSync(file)) return `第 ${i + 1} 讲`
+  const firstLine = fs.readFileSync(file, 'utf8').split('\n')[0]
+  return firstLine.replace(/^#\s*\d+\s*/, '').trim() || `第 ${i + 1} 讲`
+})
 
 // 站点共享配置
 // https://vitepress.dev/reference/site-config
@@ -61,36 +72,22 @@ export default defineConfig({
       ],
       '/dsa/': [
         {
-          text: '图解数据结构与算法',
+          text: '图解数据结构与算法 · 56 讲',
           items: [
             { text: '模块首页', link: '/dsa/' },
             { text: '学习路线', link: '/dsa/roadmap' },
           ],
         },
-        {
-          text: '图解数据结构',
-          items: [
-            { text: '复杂度分析', link: '/dsa/complexity' },
-            { text: '数组与链表', link: '/dsa/array-linked-list' },
-            { text: '栈与队列', link: '/dsa/stack-queue' },
-            { text: '哈希表', link: '/dsa/hash-table' },
-            { text: '树与二叉树', link: '/dsa/tree' },
-            { text: '堆与优先队列', link: '/dsa/heap' },
-            { text: '图', link: '/dsa/graph' },
-          ],
-        },
-        {
-          text: '图解算法',
-          items: [
-            { text: '递归与分治', link: '/dsa/recursion' },
-            { text: '排序', link: '/dsa/sorting' },
-            { text: '查找与二分', link: '/dsa/binary-search' },
-            { text: '双指针与滑动窗口', link: '/dsa/two-pointers' },
-            { text: '贪心算法', link: '/dsa/greedy' },
-            { text: '动态规划', link: '/dsa/dynamic-programming' },
-            { text: '回溯与搜索', link: '/dsa/backtracking' },
-          ],
-        },
+        ...Array.from({ length: 56 }, (_, i) => {
+          const n = i + 1
+          const num = String(n).padStart(2, '0')
+          const title = LECTURE_TITLES[n - 1]
+          return {
+            text: `${num} ${title}`,
+            link: `/dsa/lectures/${num}`,
+            collapsed: true,
+          }
+        }),
       ],
     },
 

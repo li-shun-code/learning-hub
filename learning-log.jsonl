@@ -1,0 +1,2 @@
+{"date":"2026-11-26","courses":[{"name":"数据结构与算法学习","new_docs":["01.md"],"key_concepts":["复杂度分析","大O表示法","渐进时间复杂度","加法法则与乘法法则","空间复杂度"],"progress":"已生成 01.md，待学习反馈"}],"summary":"初始化学习日志","total_new_docs":1}
+{"date":"2026-11-26","courses":[{"name":"数据结构与算法学习","new_docs":["02.md"],"key_concepts":["数组","连续存储","随机访问O(1)","插入删除O(n)","均摊复杂度"],"progress":"已生成 02.md，待学习反馈"}],"summary":"生成 02.md 数组讲义","total_new_docs":1}
