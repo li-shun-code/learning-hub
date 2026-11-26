@@ -1,0 +1,15 @@
+{
+  "name": "python-llm-learning-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Python 大模型应用开发学习站点（VitePress）",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
