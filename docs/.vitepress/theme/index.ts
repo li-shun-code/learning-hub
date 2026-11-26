@@ -17,6 +17,7 @@ import VisBacktracking from './components/VisBacktracking.vue'
 import VisComplexity from './components/VisComplexity.vue'
 import VisGreedy from './components/VisGreedy.vue'
 import VisRecursion from './components/VisRecursion.vue'
+import AiAssistant from './components/AiAssistant.vue'
 
 export default {
   extends: DefaultTheme,
@@ -36,5 +37,6 @@ export default {
     app.component('VisComplexity', VisComplexity)
     app.component('VisGreedy', VisGreedy)
     app.component('VisRecursion', VisRecursion)
+    app.component('AiAssistant', AiAssistant)
   },
 }

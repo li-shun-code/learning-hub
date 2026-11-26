@@ -13,6 +13,9 @@ hero:
       text: 图解数据结构与算法
       link: /dsa/
     - theme: alt
+      text: Claude Code 实战
+      link: /harness/
+    - theme: alt
       text: GitHub 仓库
       link: https://github.com/li-shun-code/learning-hub
 
@@ -23,6 +26,9 @@ features:
   - icon: 🧩
     title: 图解数据结构与算法
     details: 用图解 + Python 代码讲清数组、链表、树、图、排序、动态规划等核心知识，从直觉到实现。
+  - icon: ⚙️
+    title: Claude Code 实战
+    details: Harness 工程之道：记忆系统、Skills、子智能体、Hooks、MCP、Agent SDK 等工程化实践。每章配可配置模型的 AI 助教。
   - icon: 📚
     title: 持续扩展
     details: 站点按模块组织，后续可轻松加入前端、数据库、操作系统等新主题，一个仓库管理全部学习笔记。
@@ -39,6 +45,7 @@ features:
 
 - **[🤖 大模型应用开发](/llm/)**：九阶段学习路线，已完成阶段 0（AI 工具上手）和阶段 1（Python 与工程基础）的教程。
 - **[🧩 图解数据结构与算法](/dsa/)**：以图解为核心，覆盖数据结构、算法与复杂度分析，帮助建立直觉并落到代码。
+- **[⚙️ Claude Code 实战](/harness/)**：Harness 工程之道 12 章正文，每章顶部有可配置模型的 AI 助教，针对当前章节答疑。
 
 ## 为什么这样组织？
 

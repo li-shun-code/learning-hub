@@ -11,6 +11,14 @@ const LECTURE_TITLES: string[] = Array.from({ length: 56 }, (_, i) => {
   return firstLine.replace(/^#\s*\d+\s*/, '').trim() || `第 ${i + 1} 讲`
 })
 
+const HARNESS_TITLES: string[] = Array.from({ length: 12 }, (_, i) => {
+  const num = String(i + 1).padStart(2, '0')
+  const file = path.resolve(process.cwd(), `docs/harness/chapters/${num}.md`)
+  if (!fs.existsSync(file)) return `第 ${i + 1} 章`
+  const firstLine = fs.readFileSync(file, 'utf8').split('\n')[0]
+  return firstLine.replace(/^#\s*/, '').trim() || `第 ${i + 1} 章`
+})
+
 // 站点共享配置
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -34,6 +42,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '大模型应用开发', link: '/llm/' },
       { text: '图解数据结构与算法', link: '/dsa/' },
+      { text: 'Claude Code 实战', link: '/harness/' },
     ],
 
     // 按路径前缀显示不同侧边栏，让每个模块有独立导航
@@ -85,6 +94,23 @@ export default defineConfig({
           return {
             text: `${num} ${title}`,
             link: `/dsa/lectures/${num}`,
+            collapsed: true,
+          }
+        }),
+      ],
+      '/harness/': [
+        {
+          text: 'Claude Code 实战 · Harness 工程之道',
+          items: [
+            { text: '模块首页', link: '/harness/' },
+          ],
+        },
+        ...Array.from({ length: 12 }, (_, i) => {
+          const n = i + 1
+          const num = String(n).padStart(2, '0')
+          return {
+            text: HARNESS_TITLES[n - 1],
+            link: `/harness/chapters/${num}`,
             collapsed: true,
           }
         }),
