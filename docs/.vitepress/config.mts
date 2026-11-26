@@ -30,9 +30,17 @@ export default defineConfig({
   base: '/learning-hub/',
 
   head: [
-    ['meta', { name: 'theme-color', content: '#3451b2' }],
+    ['meta', { name: 'theme-color', content: '#1e66f5' }],
     ['meta', { name: 'og:type', content: 'website' }],
   ],
+
+  // 代码高亮使用 Catppuccin 配色，与主题一致
+  markdown: {
+    theme: {
+      light: 'catppuccin-latte',
+      dark: 'catppuccin-mocha',
+    },
+  },
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

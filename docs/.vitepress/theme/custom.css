@@ -4,7 +4,7 @@
   --vis-border: var(--vp-c-divider);
   --vis-text: var(--vp-c-text-1);
   --vis-muted: var(--vp-c-text-2);
-  --vis-primary: #3451b2;
+  --vis-primary: var(--vp-c-brand-1);
   --vis-accent: #d97706;
   --vis-ok: #16a34a;
   --vis-warn: #dc2626;

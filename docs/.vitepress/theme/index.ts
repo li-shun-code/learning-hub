@@ -1,5 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
+// Catppuccin 柔和主题（深色 Mocha + 蓝色强调；浅色自动用包内的 Latte）
+import '@catppuccin/vitepress/theme/mocha/blue.css'
 import './custom.css'
 
 // 交互式可视化组件
