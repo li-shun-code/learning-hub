@@ -1,4 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
+import { h } from 'vue'
 import './custom.css'
 
 // 交互式可视化组件
@@ -23,8 +24,8 @@ export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
     app.component('VisPlayer', VisPlayer)
-    app.component('VisSorting', VisSorting)
     app.component('VisBinarySearch', VisBinarySearch)
+    app.component('VisSorting', VisSorting)
     app.component('VisLinkedList', VisLinkedList)
     app.component('VisStackQueue', VisStackQueue)
     app.component('VisHashTable', VisHashTable)
@@ -38,5 +39,10 @@ export default {
     app.component('VisGreedy', VisGreedy)
     app.component('VisRecursion', VisRecursion)
     app.component('AiAssistant', AiAssistant)
+  },
+  Layout() {
+    return h(DefaultTheme.Layout, null, {
+      'layout-bottom': () => h(AiAssistant),
+    })
   },
 }
